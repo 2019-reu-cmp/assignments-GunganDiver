@@ -1,0 +1,27 @@
+1) I suppose strings are the same as lists in that they can both store many values. Where a list stores values in neat separated boxes, a string just stores all of its values in immediate succession in the same box.
+
+2) List comprehensions run faster than a for loop that appends objects to a list. Additionally, they save space in your code and look very clean.
+
+3) Here is the code I used
+... try:
+...     import matplotlib
+... except Exception as e:
+...     print('rasied error:',e)
+And matplotlib was successfully imported, with version 3.0.2.
+
+4) For numerical arrays u and v of the same size,
+using enumerate
+
+dot_prod = 0
+    for i,x in enumerate(u):
+        dot_prod += x*v[i]
+    return dot_prod
+
+using zip
+
+dot_prod = 0
+    for i,j in zip(u,v):
+        dot_prod += i*j
+    return dot_prod
+
+I like zip a little better, because it saves me the extra step of trying to figure out how to make the correct entries talk to each other.
